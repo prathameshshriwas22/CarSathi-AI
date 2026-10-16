@@ -207,5 +207,5 @@ Data Science | Machine Learning | Data Analytics | AI
 <p align="center">
   ⭐ If you find this project useful, consider giving the repository a star!
   <br><br>
-  <strong>CarSathi AI — Turning Used-Car Data into Data-Driven Insights 🚗</strong>
+  <strong>CarSathi AI — Turning Used & New-Car Data into Data-Driven Insights 🚗</strong>
 </p>
