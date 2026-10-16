@@ -1,20 +1,211 @@
-# CarSathi AI — Split Jupyter Notebooks
+# 🚗 CarSathi AI — Used Car & New Car Price Prediction
 
-The original `02_data_understanding.ipynb` was split into focused notebooks.
+<p align="center">
+  <strong>AI-Powered Indian Car Price Intelligence</strong><br>
+  An end-to-end machine learning project for understanding used-car data, cleaning datasets, exploring patterns, training models, and generating price predictions.
+</p>
 
-## Recommended execution order
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas">
+  <img src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white" alt="Jupyter">
+  <img src="https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white" alt="Scikit-learn">
+  <img src="https://img.shields.io/badge/Machine%20Learning-Models-blue?style=for-the-badge" alt="Machine Learning">
+</p>
 
-1. `01_data_understanding.ipynb` — raw dataset understanding
-2. `02_missing_data.ipynb` — missing values and data-quality investigation
-3. `03_data_cleaning.ipynb` — cleaning and ML dataset creation
-4. `04_eda.ipynb` — exploratory data analysis
-5. `05_model_training.ipynb` — model training
-6. `06_model_evaluation.ipynb` — evaluation and tuning
-7. `07_pipeline_prediction.ipynb` — final pipeline and prediction
+---
 
-## Important
+## 📌 Project Overview
 
-- The notebooks preserve the original notebook's code sections rather than replacing them with a new workflow.
-- The cleaning notebook additionally saves `cars_ml.csv` into the project's `data/processed` folder.
-- Later notebooks load that processed dataset so each notebook does not depend on variables remaining in another notebook's Jupyter kernel.
-- Update the Windows paths in the setup cells if your project folder is different.
+**CarSathi AI** is a machine learning project focused on used-car price prediction using Indian car-market data. The project follows a structured data science workflow, from raw dataset investigation to model development, evaluation, and a reusable prediction pipeline.
+
+The original data-understanding notebook has been organized into smaller, focused Jupyter notebooks to make the workflow easier to understand, execute, debug, and maintain.
+
+## ✨ Project Highlights
+
+- 🔍 **Data Understanding:** Explore the dataset structure, columns, and data types.
+- 🧩 **Missing Data Analysis:** Investigate missing values and potential data-quality issues.
+- 🧹 **Data Cleaning:** Prepare a cleaned dataset for machine learning.
+- 📊 **Exploratory Data Analysis:** Discover patterns and relationships in used-car data.
+- 🤖 **Model Training:** Train machine learning models for price prediction.
+- 📈 **Model Evaluation:** Compare model performance and investigate tuning.
+- 🔗 **Prediction Pipeline:** Build and use a reusable pipeline for predictions.
+- 💾 **Processed Data:** Save the cleaned ML dataset so later notebooks can run independently.
+
+## 🗂️ Notebook Execution Roadmap
+
+Run the notebooks in the following order.
+
+| Step | Notebook | Purpose |
+|---|---|---|
+| 1 | `01_data_understanding.ipynb` | Understand the raw dataset |
+| 2 | `02_missing_data.ipynb` | Investigate missing values and data quality |
+| 3 | `03_data_cleaning.ipynb` | Clean the data and prepare the ML dataset |
+| 4 | `04_eda.ipynb` | Perform exploratory data analysis |
+| 5 | `05_model_training.ipynb` | Train machine learning models |
+| 6 | `06_model_evaluation.ipynb` | Evaluate and tune models |
+| 7 | `07_pipeline_prediction.ipynb` | Create and use the prediction pipeline |
+
+## 🔄 Project Workflow
+
+```text
+Raw Car Dataset
+      │
+      ▼
+Data Understanding
+      │
+      ▼
+Missing Data Investigation
+      │
+      ▼
+Data Cleaning
+      │
+      ▼
+Processed Dataset
+   (cars_ml.csv)
+      │
+      ▼
+Exploratory Data Analysis
+      │
+      ▼
+Model Training
+      │
+      ▼
+Model Evaluation & Tuning
+      │
+      ▼
+Prediction Pipeline
+      │
+      ▼
+Used-Car Price Prediction
+```
+
+## 🛠️ Tech Stack
+
+| Technology | Usage |
+|---|---|
+| Python | Data processing and model development |
+| Pandas & NumPy | Data manipulation and numerical operations |
+| Matplotlib & Seaborn | Data visualization and exploratory analysis |
+| Jupyter Notebook | Interactive experimentation and documentation |
+| Scikit-learn | Machine learning and prediction pipelines |
+| Joblib | Saving and loading trained model artifacts |
+
+*The table describes the project's intended technical workflow; refer to the notebook imports and `requirements.txt` for the exact dependencies used.*
+
+## 📁 Project Structure
+
+```text
+CarSathi-AI/
+│
+├── app.py
+├── README.md
+├── requirements.txt
+├── test_groq.py
+├── car_price_prediction_pipeline.pkl
+│
+├── data/
+│   ├── raw/
+│   │   ├── CAR DETAILS FROM CAR DEKHO.csv
+│   │   ├── Car details v3.csv
+│   │   ├── car data.csv
+│   │   └── car details v4.csv
+│   └── processed/
+│       └── cars_ml.csv
+│
+├── notebooks/
+│   ├── 01_data_understanding.ipynb
+│   ├── 01_environment_test.ipynb
+│   ├── 02_data_understanding.ipynb
+│   ├── 02_missing_data.ipynb
+│   ├── 03_data_cleaning.ipynb
+│   ├── 04_eda.ipynb
+│   ├── 05_model_training.ipynb
+│   ├── 06_model_evaluation.ipynb
+│   └── 07_pipeline_prediction.ipynb
+│
+└── .gitignore
+```
+
+*Note: `cars_ml.csv` is generated by the cleaning notebook. The `data/processed` directory and file may not exist until that notebook is executed.*
+
+## ⚙️ Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/prathameshshriwas22/CarSathi-AI.git
+cd CarSathi-AI
+```
+
+### 2. Create a virtual environment
+
+```bash
+python -m venv .venv
+```
+
+Activate it on Windows PowerShell:
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
+
+### 3. Install dependencies
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+### 4. Launch Jupyter Notebook
+
+```bash
+python -m pip install notebook
+jupyter notebook
+```
+
+Open the `notebooks/` directory and execute the notebooks in the recommended order.
+
+### 5. Run the application
+
+The repository also contains `app.py` and a saved model pipeline. To launch the application, first review the app's dependencies and configuration, then use the appropriate launch command for the framework implemented in `app.py`.
+
+## 📂 Data Preparation Notes
+
+- The raw datasets are stored in `data/raw/`.
+- The cleaning notebook saves the processed dataset as `data/processed/cars_ml.csv`.
+- Later notebooks load the processed dataset rather than relying on variables from another notebook's running kernel.
+- Update any hard-coded Windows file paths in notebook setup cells if your project is stored in a different directory.
+- Run the cleaning notebook before the downstream notebooks if the processed dataset does not exist.
+
+## ⚠️ Important Notes
+
+- The notebooks retain the original notebook's code sections rather than replacing them with an entirely new workflow.
+- The notebook sequence is designed to make each stage easier to run and troubleshoot.
+- Model performance should be reported only after running the evaluation notebook.
+- A saved `.pkl` model should be loaded only from a trusted source, as Python pickle-based files can execute code during deserialization.
+
+## 🚀 Future Enhancements
+
+- Build a user-friendly interface for car-price predictions.
+- Add car recommendations based on budget and preferences.
+- Provide comparisons between selected cars.
+- Add estimated EMI and ownership-cost calculations.
+- Improve deployment and automated testing.
+
+*These are potential future enhancements, not claims that all features are currently implemented.*
+
+## 👨‍💻 Author
+
+**Prathamesh Shriwas**
+
+Data Science | Machine Learning | Data Analytics | AI
+
+- GitHub: [@prathameshshriwas22](https://github.com/prathameshshriwas22)
+
+---
+
+<p align="center">
+  ⭐ If you find this project useful, consider giving the repository a star!
+  <br><br>
+  <strong>CarSathi AI — Turning Used-Car Data into Data-Driven Insights 🚗</strong>
+</p>
